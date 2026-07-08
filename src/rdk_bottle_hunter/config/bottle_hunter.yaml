@@ -1,0 +1,33 @@
+camera_detector_node:
+  ros__parameters:
+    camera_id: 0
+    frame_width: 640
+    frame_height: 480
+    fps: 30
+    conf_threshold: 0.4
+    nms_threshold: 0.45
+    publish_annotated: false
+
+motor_driver_node:
+  ros__parameters:
+    port: "/dev/ttyS1"
+    baud: 115200
+    watchdog_timeout: 1.0
+
+controller_node:
+  ros__parameters:
+    base_speed: 200
+    diff_max: 200
+    capture_bbox_ratio: 0.7
+    capture_near_frames: 3
+    capture_ch2: 1800
+    capture_ch3: 1200
+    capture_duration: 1.0
+    wall_min_dist: 0.5
+    forward_sector_deg: 30.0
+    obstacle_min_pts: 3
+    avoid_ch2: 1800
+    avoid_ch3: 1200
+    avoid_duration: 2.0
+    detection_timeout: 0.5
+    control_rate: 20.0
